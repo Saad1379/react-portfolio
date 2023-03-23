@@ -2,7 +2,7 @@ import React from "react";
 import { About, Footer, Header, Skills, Testimonial, Work } from "./container";
 import { Navbar } from "./components";
 import "./App.scss";
-
+import Sitemap from "./utils/Sitemap";
 const App = () => (
   <div className="app">
     <Navbar />
@@ -12,6 +12,11 @@ const App = () => (
     <Skills />
     <Testimonial />
     <Footer />
+    <BrowserRouter>
+      <Routes>
+        <Route path="/sitemap.xml" element={<Sitemap />} />
+      </Routes>
+    </BrowserRouter>
   </div>
 );
 
